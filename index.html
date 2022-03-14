@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MQTT</title>
+  <link rel="stylesheet" href="public/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Montserrat:wght@300&display=swap"
+    rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.js" type="text/javascript"></script>
+  <script src="public/app.js"></script>
+</head>
+<body>
+  <div class="navbar">
+    <ul class="navbar-row">
+      <li class="navbar-item" id="publish" onclick="changeActive(this)"><h3>Publish</h3></li>
+      <li class="navbar-item" id="subscribe" onclick="changeActive(this)"><h3>Subscribe</h3></li>
+    </ul>
+    <hr id="active-bar" class="active-publish">
+  </div>
+  <div class="main-container">
+    <div class="form-container">
+      <form action="" method="">
+        <div class="form-div">
+          <label for="">topic name</label>
+          <input type="text" name="topicname" value="test">
+        </div>
+        <!--
+          <div class="form-div">
+          <input type="checkbox" id="user"  onclick="optionsClick(this)">
+          <label for="">user</label>
+          <div class="options-div" id="useroptions">
+            <label for="username">username</label>
+            <input type="text" name="username">
+            <br>
+            <label for="password">password</label>
+            <input type="text" name="password">
+            <br>
+          </div>
+        </div>
+        <div class="form-div">
+          <input type="checkbox" id="port" onclick="optionsClick(this)">
+          <label for="">port</label>
+          <div class="options-div" id="portoptions">
+            <label for="portno">port no</label>
+            <input type="text" name="portno">
+            <br>
+          </div>
+        </div>
+        <div class="form-div">
+          <input type="checkbox" id="host" onclick="optionsClick(this)">
+          <label for="">host</label>
+          <div class="options-div" id="hostoptions">
+            <label for="hostname">host name</label>
+            <input type="text" name="hostname">
+            <br>
+          </div>
+        </div>
+      -->
+        <div class="form-div extra">
+          <input type="checkbox" id="message" onclick="optionsClick(this)">
+          <label for="">message</label>
+          <div class="options-div" id="messageoptions">
+            <label for="messagebox">Enter message</label>
+            <input type="text" name="messagebox">
+            <br>
+          </div>
+        </div>
+        <button type="button" class="btn" onclick="newAction(this)">publish</button>
+      </form>
+    </div>
+    <div id="topic-container" class="none">
+      <h2>Messages Received</h2>
+    </div>
+  </div>
+  <div id="result-div">
+
+  </div>
+</body>
+</html>
